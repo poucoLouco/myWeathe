@@ -42,6 +42,24 @@ let twoDecimalPlacesWind="WIND SPEED: " + windMPH.toFixed(2) + " mph"
 let getIcon=weather.weather[0].icon;
 let weathericon = `<img src="http://openweathermap.org/img/w/${getIcon}.png"/>`;
 
-mydiv.innerHTML= `<h2>${nameCity}<h2><br>${weathericon}<br><h3> ${temp} <br>${tempfeel} <br>${mintemp} <br>${maxtemp}<br>${twoDecimalPlacesWind}</h3>`
 
+
+
+
+mydiv.innerHTML=
+`<div class="card" style="width: 18rem;">
+    <img class="card-img-top h-50 w-50" ${weathericon}
+    <div class="card-body">
+      <h5 class="card-title">${nameCity}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"> ${temp}</li>
+      <li class="list-group-item">${tempfeel}</li>
+      <li class="list-group-item">${mintemp}</li>
+      <li class="list-group-item">${maxtemp}</li>
+      <li class="list-group-item">${twoDecimalPlacesWind}</li>
+    </ul>
+  </div>
+</body>
+</html>`
 }

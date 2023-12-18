@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="background-image: url('https://media2.giphy.com/media/cXQd3YcBZQ868tiG40/giphy.gif');         background-repeat: no-repeat;
+background-attachment: fixed;
+background-size:cover" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +13,26 @@
 
 </head>
 <body>
-<h1>Get weather details</h1>
-<div class="mb-3">
-    <label for="" class="form-label">Zipcode</label>
+<div class="position-absolute top-25 start-25 m-3 p-3" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 3%;">
+<h1 style="color: aliceblue;">GET WEATHER</h1>
+<div class="mb-3 ">
+    <label for="" class="form-label" style="color: aliceblue;">ZIPCODE/CITY</label>
     <input
         type="text"
-        class="form-control"
+        class="form-control w-50"
         name=""
         id="zipcode"
         aria-describedby="helpId"
         placeholder=""
+        
     />
-    <small id="helpId" class="form-text text-muted">ZIPCODE/CITY</small>
-
+    <!-- <small id="helpId" class="form-text text-muted m-4 w-25">ZIPCODE/CITY</small> -->
+    <button class="btn btn-success my-3 " onclick="getWeather()">SUBMIT</button>
 </div>
-<button class="btn btn-success" onclick="getWeather()">Get weather details</button>
 
 
-<div id="w">Weather details should be displayed here</div>
+
+<div id="w"></div>
  <!--input fiesl/form for taking the information/zipcode from user
     and button to submit
 2 onclick event handler on the button, we call js function
@@ -37,5 +41,7 @@
 5 print to console the temp.get the empty div using id and display diteils in tha div
 , using innerHTML or textContent-->
 
+</div>
+  
 </body>
 </html>
